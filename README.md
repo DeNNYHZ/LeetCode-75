@@ -1,2 +1,1 @@
-# LeetCode-75 USING Go-Language
-Hello World, this is my Learning Path
+# Hello World, this is my Go Learning Path through problems hosted at leetcode.com
