@@ -1,4 +1,4 @@
-package main
+package Array_String
 
 import (
 	"fmt"
