@@ -1,4 +1,4 @@
-package LeetCode_75
+package Binary_Search_Tree
 
 // Definition for a binary tree node.
 type TreeNode struct {
