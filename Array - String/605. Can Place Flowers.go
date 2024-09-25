@@ -1,4 +1,4 @@
-package Array_String
+package Array___String
 
 func canPlaceFlowers(flowerbed []int, n int) bool {
 	var res int

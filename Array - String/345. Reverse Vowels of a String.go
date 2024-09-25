@@ -1,4 +1,4 @@
-package Array_String
+package Array___String
 
 import (
 	"strings"

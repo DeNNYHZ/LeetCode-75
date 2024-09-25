@@ -1,4 +1,4 @@
-package Array_String
+package Array___String
 
 func kidsWithCandies(candies []int, extraCandies int) []bool {
 	max := 0
