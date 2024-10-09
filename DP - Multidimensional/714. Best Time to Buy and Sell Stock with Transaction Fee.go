@@ -1,4 +1,4 @@
-package main
+package DP__Multidimensional
 
 import "fmt"
 

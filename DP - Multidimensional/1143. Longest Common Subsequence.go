@@ -1,4 +1,4 @@
-package main
+package DP__Multidimensional
 
 func longestCommonSubsequence(text1 string, text2 string) int {
 	// Membuat tabel 2D untuk menyimpan panjang subsequence
