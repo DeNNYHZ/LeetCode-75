@@ -1,10 +1,5 @@
 package Linked_List
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 func deleteMiddle(head *ListNode) *ListNode {
 	if head.Next == nil {
 		return nil
