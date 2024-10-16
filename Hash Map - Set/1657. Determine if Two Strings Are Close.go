@@ -1,35 +1,21 @@
 package Hash_Map___Set
 
-import "strconv"
-
-func toSet(s string) map[rune]struct{} {
-	set := make(map[rune]struct{})
-	for _, char := range s {
-		set[char] = struct{}{}
-	}
-	return set
-}
-
-func haveSameAlphabets(word1, word2 string) bool {
-	word1 = strconv.Itoa(len(word1))
-	word2 = strconv.Itoa(len(word2))
-
-	if word1 != word2 {
+func closeStrings(word1 string, word2 string) bool {
+	if len(word1) != len(word2) {
 		return false
 	}
-
-	set1 := toSet(word1)
-	set2 := toSet(word2)
-
-	if len(set1) != len(set2) {
-		return false
+	m1 := make(map[rune]int)
+	m2 := make(map[rune]int)
+	for _, c := range word1 {
+		m1[c]++
 	}
-
-	for char := range set1 {
-		if _, ok := set2[char]; !ok {
+	for _, c := range word2 {
+		m2[c]++
+	}
+	for k, v := range m1 {
+		if m2[k] != v {
 			return false
 		}
 	}
 	return true
-
 }
