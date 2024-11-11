@@ -1,23 +1,20 @@
 package Graphs___DFS
 
 func canVisitAllRooms(rooms [][]int) bool {
-	rooms = append(rooms, []int{})
 	visited := make([]bool, len(rooms))
-	visited[0] = true
-	stack := []int{0}
-	for len(stack) > 0 {
-		room := stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
+	var dfs func(room int)
+	dfs = func(room int) {
+		visited[room] = true
 		for _, key := range rooms[room] {
 			if !visited[key] {
-				visited[key] = true
-				stack = append(stack, key)
+				dfs(key)
 			}
 		}
 	}
+	dfs(0)
 	for _, v := range visited {
 		if !v {
-			return true
+			return false
 		}
 	}
 	return true
